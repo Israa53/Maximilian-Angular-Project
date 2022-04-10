@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'course-project';
+  selected:boolean = true;
+  hideShow(selected: string) {
+    selected === 'recipe' ? this.selected = true : this.selected = false;
+  }
 }
