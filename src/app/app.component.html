@@ -1,0 +1,5 @@
+<app-header (selectedValue)="hideShow($event)"></app-header>
+<div class="container-fluid">
+  <app-recipes *ngIf="selected"></app-recipes>
+  <app-shopping-list *ngIf="!selected"></app-shopping-list>
+</div>
