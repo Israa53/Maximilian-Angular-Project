@@ -3,3 +3,7 @@
   <app-recipes *ngIf="selected"></app-recipes>
   <app-shopping-list *ngIf="!selected"></app-shopping-list>
 </div>
+
+<h2>Master controls {{names.length}} names</h2>
+
+<app-test *ngFor="let name of names" [name]="name"></app-test>
