@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from 'src/app/models/recipe.model';
-import { RecipesService } from 'src/app/services/recipes.service';
+import { RecipeService } from 'src/app/services/recipes.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.scss'],
-  providers:[RecipesService]
+  styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
   recipes!: Recipe[] ;
-constructor(private recipesService:RecipesService) { }
+constructor(private recipeService:RecipeService) { }
   ngOnInit(): void {
-    this.recipes = this.recipesService.getRecipes();
+    this.recipes = this.recipeService.getRecipes();
   }
 }
